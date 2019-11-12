@@ -6,7 +6,6 @@ jdk:
 env:
         - _JAVA_OPTIONS="-Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw"
 
-
 before_install:
   # setup pgp signing key
   - if [ -n "$GPG_KEY" ]; then echo $GPG_KEY | base64 --decode | $GPG_EXECUTABLE --import; fi
