@@ -70,6 +70,7 @@ public class ParameterMeasurements extends ChartPlugin {
 
         final MenuBar menuBar = new MenuBar();
         final Menu fileMenu = new Menu(null, new Glyph(FONT_AWESOME, TOOLBUTTON).size(FONT_SIZE));
+        fileMenu.setId("parameterMeasurementMenu");
         // final String tooltipKey = "TOOL_TIP";
         // fileMenu.getProperties().put(tooltipKey, new Tooltip("add measurement
         // indicator"));

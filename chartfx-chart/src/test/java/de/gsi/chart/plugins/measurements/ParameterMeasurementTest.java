@@ -23,7 +23,6 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -65,7 +64,7 @@ class ParameterMeasurementTest {
         // Add a new measurement
         Point2D toolbarPoint = fxRobot.offset(fxRobot.lookup("#myChart").query(), Pos.TOP_CENTER, new Point2D(0, 1))
                 .query();
-        fxRobot.moveTo(toolbarPoint).interrupt().sleep(30).press(MouseButton.PRIMARY)
+        fxRobot.moveTo(toolbarPoint).sleep(1000).interrupt().clickOn("#parameterMeasurementMenu")
                 .moveTo(((Node) fxRobot.lookup(LabeledMatchers.hasText("Indicators")).query()), Motion.DIRECT) //
                 .sleep(10)//
                 .press(KeyCode.DOWN) //
