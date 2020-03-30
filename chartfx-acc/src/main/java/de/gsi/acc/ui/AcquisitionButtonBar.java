@@ -1,6 +1,5 @@
 package de.gsi.acc.ui;
 
-import de.gsi.chart.viewer.SquareButton;
 import javafx.beans.NamedArg;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -8,10 +7,12 @@ import javafx.css.PseudoClass;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
+import de.gsi.chart.viewer.SquareButton;
+
 public class AcquisitionButtonBar extends HBox {
-    private static String DEFAULT_CSS = AcquisitionButtonBar.class.getResource("acq_button_small.css").toExternalForm();
-    private static PseudoClass PSEUDO_CLASS_ACTIVATED = PseudoClass.getPseudoClass("activated");
-    private static PseudoClass PSEUDO_CLASS_PAUSE = PseudoClass.getPseudoClass("paused");
+    private static final String DEFAULT_CSS = AcquisitionButtonBar.class.getResource("acq_button_small.css").toExternalForm();
+    private static final PseudoClass PSEUDO_CLASS_ACTIVATED = PseudoClass.getPseudoClass("activated");
+    private static final PseudoClass PSEUDO_CLASS_PAUSE = PseudoClass.getPseudoClass("paused");
     private final Button buttonPlayStop = new SquareButton("my-playstop-button");
     private final Button buttonPlay = new SquareButton("my-play-button");
     private final Button buttonStop = new SquareButton("my-stop-button");
